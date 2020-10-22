@@ -1,27 +1,28 @@
-# Planets
+# QU Planets
+This project consists of one angular application that uses Swapi Planets to show items, filter them, paginate, and order by drag and drop.
+The project has 90% of testing coverage and includes a Dockerfile so as to get a container with the app running into Nginx and test the app easily.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.0.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Steps to test the app working:
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Test the Application running
 
-## Build
+1. - 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+    The first step to both ways is install all dependencies, for that we will need run ``npm install``
 
-## Running unit tests
+2. -
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+    if you have docker installed you just need to run ``npm run docker:run`` command and when the process finish
+    open the browser ``http://localhost:8080`` and that's it, you will be watching the app running.
 
-## Running end-to-end tests
+    If you don't have docker, no worries, is easy to run locally anyway.
+    You will need to run ``npm start`` or ``npm run start`` and then open your browser in ``http://localhost:4200`` and at this 
+    moment you will start to watch the application as well.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+### Tests
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+    You can run the tests to verify both, testing and coverage.
+    ``npm run test`` or ``npm run test:coverage``
