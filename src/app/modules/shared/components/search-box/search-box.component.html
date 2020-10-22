@@ -1,0 +1,6 @@
+<form [formGroup]="form" class="w-100" (submit)="searchPlanet()">
+  <mat-form-field class="w-100">
+    <input matInput formControlName="searchBox" placeholder="Search planet..." autocomplete="off">
+    <mat-icon matSuffix>search</mat-icon>
+  </mat-form-field>
+</form>

@@ -1,0 +1,24 @@
+<div class="main">
+  <div class="row m-0 p-0">
+    <div class="col-12 w-100">
+      <app-search-box (filterChanged)="searchPlanet($event)"></app-search-box>
+    </div>
+    <div cdkDropList class="row m-0 mt-2 p-0 w-100 h-100 drop-list" (cdkDropListDropped)="drop($event)">
+      <div *ngIf="loading$ | async" class="col-12 w-100 d-flex justify-content-center align-items-center">
+        <app-loader></app-loader>
+      </div>
+      <div class="col-12" *ngIf="noItems">
+        <app-no-planets></app-no-planets>
+      </div>
+      <div *ngFor="let planet of planets" class="col-12" cdkDrag>
+          <app-planet [planet]="planet" (onSelected)="showDetails($event)"></app-planet>
+      </div>
+    </div>
+  </div>
+  <div class="row m-0 p-0 w-100">
+    <div class="col-12 w-100">
+      <mat-paginator [length]="count" [pageSize]="itemsPerPage" (page)="pageEvent($event)">
+      </mat-paginator>
+    </div>
+  </div>
+</div>

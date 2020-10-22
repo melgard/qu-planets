@@ -1,0 +1,20 @@
+<div class="planet" (click)="clicked($event)">
+ <div class="body">
+   <div class="header">
+     <app-first-letter [word]="name"></app-first-letter>
+     <h2> {{name}} </h2>
+   </div>
+
+   <div class="footer">
+     <div class="population">
+       <p class="title">population</p>
+       <p class="data">{{planet?.population}}</p>
+     </div>
+     <div class="diameter">
+       <p class="title">diameter</p>
+       <p class="data">{{planet?.diameter}}</p>
+     </div>
+   </div>
+ </div>
+
+</div>

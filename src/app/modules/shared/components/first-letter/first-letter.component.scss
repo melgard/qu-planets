@@ -1,0 +1,11 @@
+:host{
+  .first-letter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background-color: #008aa2;
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+}
